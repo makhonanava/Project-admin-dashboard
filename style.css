@@ -1,0 +1,414 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+}
+
+body>div  {
+    display: grid;
+    grid-template-columns:1fr 3fr;
+    grid-template-rows: 150px 560px ;
+    grid-template-areas:
+    "nav header"
+    "nav main"
+    ;
+}
+
+nav {
+    background-color: #4995d0;
+    grid-area: nav;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 300px 150px;
+    
+}
+
+
+header {
+    background-color: rgb(255, 255, 255);
+    grid-area: header;
+    grid-template-columns: 5fr 3fr;
+    grid-template-rows: 50px 80px;
+    padding: 18px;
+    
+}
+
+
+main {
+    background-color: #e9edf4;
+    grid-area: main;
+    grid-template-columns: 3fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcement"
+    "projects trending";
+}
+
+ul {
+    list-style: none;
+    color: white;
+    
+    
+}
+
+.Dashboard-icon::before{
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    background-size: cover ;
+    background-image: url('./images/view-dashboard-outline.svg');
+}
+
+.Home-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/home-circle-outline.svg');
+}
+
+.Profile-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/card-account-details-outline.svg');
+}
+
+.Messages-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/message-outline.svg');
+}
+
+.History-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/clock-outline.svg');
+}
+
+.Tasks-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/file-multiple-outline.svg');
+}
+
+.Communities-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/account-group-outline.svg');
+}
+
+.Settings-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/cog-outline.svg');
+}
+
+.Support-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/help-circle-outline.svg');
+}
+
+.Privacy-icon::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: cover ;
+    background-image: url('./images/shield-check-outline.svg');
+
+
+}
+
+.Dashboard > li {
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.Dashboard-properties {
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.search-button {
+    width: 90%;
+    height: 25px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: rgba(114, 98, 98, 0.153);
+    margin-left: 30px;
+}
+
+.searchbar {
+    align-items: baseline;
+
+}
+
+.search-image {
+    position: absolute;
+}
+
+.profile-picture {
+    width: 45px;
+    height: 45px;
+    background-image: url(./images/profile-picture.png);
+    background-size: cover;
+    border-radius: 100px;
+    border-style: none;
+    margin-top: -10px;
+}
+
+
+.profile {
+    justify-content: baseline;
+    
+    justify-content: space-around;
+}
+
+.profile > p {
+    margin-top: -0px;
+    font-weight: 500;
+}
+
+.nickname > img {
+    width: 65px;
+    height: 65px;
+    border-radius: 100px;
+    margin-right: 30px;
+}
+
+.nickname > p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    
+}
+
+.nickname span {
+    font-size: 0.7rem;
+}
+
+.nickname {
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+
+
+.buttons{
+    justify-content: space-between;
+}
+
+button {
+    height: 34px;
+    width: 90px;
+    align-self: center;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #4995d0 ;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.projects {
+    grid-area: projects;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-left: 20px;
+    padding-top: 25px;
+    align-content: space-around;
+}
+
+
+
+.announcements {
+    grid-area: announcement;
+    
+}
+
+.announcements-card {
+    flex-direction: column;
+    height: 91%;
+    width: 90%;
+    background-color: white;
+    margin-top: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.153);
+    font-size: 0.7rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.announcements-card > span {
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: -10px;
+    margin-left: -10px;
+}
+
+.announcements-card >span:first-child {
+    margin-left: -40px;
+}
+
+.announcements-card > p {
+    width: 70%;
+   
+}
+
+.trending {
+    grid-area: trending;
+}
+
+.trending-card {
+    flex-direction: column;
+    height: 235px;
+    width: 90%;
+    background-color: white;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.153);
+    justify-content: space-around;
+    align-content: center;
+    padding-left: 15px;
+}
+
+.trending-card > div  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    border-style: none;
+    margin-right: 10px;
+}
+
+.first, .second , .third , .fourth {
+    height: 48px;
+    font-size: 0.78rem;
+}
+
+.first  span , .second span , .third span, .fourth span {
+    font-weight: 300;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.first p, .second p, .third p , .fourth p {
+    width: 150px;
+    margin-left: -40px;
+    margin-top: auto;
+}
+
+.project-card {
+    background-color: white;
+    height: 170px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.153);
+    border-left: 7px solid #f4b400;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.project-card > span {
+    margin-top: 20px;
+    margin-bottom: -13px;
+    font-weight: 500;
+}
+
+.project-card > p {
+    font-size: 0.8rem;
+    width: 250px;
+    margin-bottom: -20px;
+}
+
+.icons {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    width: 140px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icons > img {
+    width: 22px;
+    height: 22px;
+    
+}
+
+.project-card .h2 {
+    position: relative;
+    bottom: 42px;
+    right: 24px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.announcements-card .h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 28px;
+    right: 18px;
+}
+
+.trending-card .h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 28px;
+    right: 18px;
+}
