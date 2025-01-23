@@ -19,7 +19,7 @@ body {
 body>div  {
     display: grid;
     grid-template-columns:1fr 3fr;
-    grid-template-rows: 150px 560px ;
+    grid-template-rows: 150px calc(100vh - 150px) ;
     grid-template-areas:
     "nav header"
     "nav main"
@@ -270,8 +270,33 @@ button {
     padding-left: 20px;
     padding-top: 25px;
     align-content: space-around;
+    justify-content: center;
 }
 
+.project-card {
+    box-sizing: border-box;
+    background-color: white;
+    height: 170px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.153);
+    border-left: 7px solid #f4b400;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: flex-start;
+}
+
+.project-card > span {
+    
+    margin-bottom: -13px;
+    font-weight: 500;
+}
+
+.project-card > p {
+    font-size: 0.8rem;
+    width: 250px;
+    margin-bottom: -20px;
+}
 
 
 .announcements {
@@ -281,8 +306,8 @@ button {
 
 .announcements-card {
     flex-direction: column;
-    height: 91%;
-    width: 90%;
+    height: 254px;
+    width: 220px;
     background-color: white;
     margin-top: auto;
     border-radius: 10px;
@@ -313,9 +338,10 @@ button {
 }
 
 .trending-card {
+    box-sizing: border-box;
     flex-direction: column;
-    height: 235px;
-    width: 90%;
+    height: 254px;
+    width: 220px;
     background-color: white;
     margin-top: 40px;
     border-radius: 10px;
@@ -350,28 +376,6 @@ button {
     margin-top: auto;
 }
 
-.project-card {
-    background-color: white;
-    height: 170px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.153);
-    border-left: 7px solid #f4b400;
-    flex-direction: column;
-    padding-left: 20px;
-}
-
-.project-card > span {
-    margin-top: 20px;
-    margin-bottom: -13px;
-    font-weight: 500;
-}
-
-.project-card > p {
-    font-size: 0.8rem;
-    width: 250px;
-    margin-bottom: -20px;
-}
 
 .icons {
     align-self: flex-end;
